@@ -1,0 +1,112 @@
+.text-editor{
+    position: absolute;
+    width: 100%;
+    /* margin: 5rem auto; */
+    /* border-radius: 10px; */
+    /* border: 1px solid red; */
+}
+
+.tiptap{
+    margin-top: .5rem;
+    padding: 10px;
+    border: var(--border-plate-color);
+    border-radius: 0 0 10px 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    background: transparent;
+    overflow-y: scroll;
+    min-height: 13rem;
+    outline: none;
+    transition: border .3s ease;
+}
+
+.tiptap:focus{
+    border: var(--border-items-color-hover);
+    transition: border .3s ease;
+}
+
+.tiptap > * + * {
+    margin-top: 0.75em;
+}
+
+.tools-wrapper{
+    display: flex;
+    justify-content: start;
+    gap: .3rem;
+}
+.tools-wrapper button{
+    outline: none;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: 7px;
+    border: var(--border-btn-color);
+    background: var(--btn-black-color);
+    /* box-shadow: var(--btn-black-shadow); */
+    font-size: 1.1rem;
+    padding: .4rem .6rem;
+    cursor: pointer;
+   
+}
+.tool-icon {
+    color: var(--text-color);
+    border: 1px solid red;
+    right: 20px;
+    top: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tiptap ul,
+.tiptap ol {
+    padding: 0 1rem;
+}
+
+.tiptap h1,
+.tiptap h2,
+.tiptap h3,
+.tiptap h4,
+.tiptap h5,
+.tiptap h6 {
+    line-height: 1.1;
+}
+
+.tiptap code {
+    background-color:#616161;
+    color: #616161;
+}
+
+.tiptap pre {
+    /* background: #0D0D0D; */
+    background: blue;
+    color: #FFF;
+    /* font-family: 'JetBrainsMono', monospace; */
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid red;
+}
+.tiptap code {
+    color: inherit;
+    padding: 0;
+    background: none;
+    font-size: 0.8rem;
+}
+
+
+.tiptap img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tiptap blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid #0D0D0D;
+}
+
+.tiptap hr {
+    border: none;
+    border-top: 2px solid #0D0D0D;
+    margin: 2rem 0;
+}

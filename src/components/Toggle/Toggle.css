@@ -1,0 +1,63 @@
+.toggle-wrapper input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.toggle-wrapper .toggle-label {
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+.toggle-wrapper .toggle-label:before {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 22px;
+    display: block;
+    background: #9a9da3;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+.toggle-wrapper .toggle-label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: var(--plate-color);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(154,153,153,0.75);
+    transition: all 0.2s ease;
+}
+.toggle-wrapper .toggle-label span svg {
+    margin: 7px;
+    fill: none;
+}
+.toggle-wrapper .toggle-label span svg path {
+    stroke: #c8ccd4;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 0;
+    transition: all 0.5s linear;
+}
+.toggle-wrapper input[type="checkbox"]:checked + .toggle-label:before {
+    background: #5E5DF0;
+}
+.toggle-wrapper input[type="checkbox"]:checked + .toggle-label span {
+    transform: translateX(18px);
+}
+.toggle-wrapper input[type="checkbox"]:checked + .toggle-label span path {
+    stroke: #5E5DF0;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+}
+

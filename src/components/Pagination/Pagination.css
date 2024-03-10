@@ -1,0 +1,36 @@
+.pagination-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.1rem;
+    /* border: 1px solid red; */
+}
+
+.pagination-container .page-num-btn button{
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 2.7rem;
+    border-radius: 20px;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    
+}
+
+.pagination-container .page-num-btn button.active{
+    background: var(--button-color2);
+    box-shadow: #8c8cf6 0 10px 20px -10px;
+}
+
+.pagination-container .prev-btn button,
+.pagination-container .next-btn button
+{
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 20px;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+}

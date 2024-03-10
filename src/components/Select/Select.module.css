@@ -1,0 +1,135 @@
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 55px;
+    border: var(--border-btn-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    padding: .5em;
+    outline: none;
+    color: white;
+}
+
+.container:focus{
+    border: var(--border-items-color-hover);
+}
+
+.labelline{
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--text-color-inside-field);
+    padding: 0 25px;
+    margin: 0 10px;
+    background-color: transparent;
+    transition: all 0.2s ease-out;
+}
+
+.labelline.active{
+    color: var(--text-color);
+    font-size: .9rem;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    padding-bottom: 5px;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10%;
+    transform: translate(-15px, -28px) scale(0.88);
+    transition: all 0.2s ease-out;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+
+.value{
+    flex-grow: 1;
+}
+
+.clear-btn{
+    background: none;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: .3rem;
+    font-size: 1.25em;
+    width: 2rem;
+    height: 2rem;  
+}
+
+.clear-btn:focus,
+.clear-btn:hover{
+    color: var(--border-items-color-hover);
+}
+
+.divider{
+    /* font-size: 2.5rem; */
+    color: var(--text-color);
+}
+
+.caret{
+    color: var(--text-color);
+    /* border: 1px solid red; */
+    outline: none;
+    cursor: pointer;
+    padding: .3rem;
+    font-size: 1.25em;
+    width: 2rem;
+    height: 2rem;
+}
+
+.caret-icon{
+    transform: rotate(0);
+    transition: transform .3s ease;
+}
+
+.caret-icon.rotate{
+    transform: rotate(180deg);
+    transition: transform .3s ease;
+}
+
+.options{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 20em;
+    overflow: hidden;
+    background: var(--plate-bg-color);
+    backdrop-filter: blur(5px);
+    border: var(--border-items-color-hover);
+    border-radius: 10px;
+    width: 100%;
+    left: 0;
+    top: calc(100% + .25em);
+    z-index: 100;
+    display: none;
+}
+
+.options.show{
+    display: block;
+    overflow-y: scroll;
+    border: var(--border-items-color-hover);
+}
+
+.option{
+    padding: 1em 1em;
+    margin: .5em;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.option.highlighted{
+    background-color: #5454db;
+    border-radius: 10px;
+}
+
+.option.selected{
+    background-color: #2e2e39;
+    color: var(--text-color);
+    border-radius: 10px;
+}
